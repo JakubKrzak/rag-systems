@@ -2,12 +2,13 @@ from pathlib import Path
 import re
 
 #path
-metadata = "/home/kuba/RAG/rag-systems/data/metadata"
-processed_data = "/home/kuba/RAG/rag-systems/data/processed_data"
+metadata_path = "/home/kuba/rag-systems/data/metadata"
+processed_data_path = "/home/kuba/rag-systems/data/processed_data"
 
 #Folders
-input_dir = Path(metadata)
-output_dir = Path(processed_data)
+input_dir = Path(metadata_path)
+output_dir = Path(processed_data_path)
+output_dir.mkdir(parents=True, exist_ok=True)
 
 #Cleaning txt
 counter = 0

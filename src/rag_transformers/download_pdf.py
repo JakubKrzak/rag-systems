@@ -16,7 +16,7 @@ ARXIV_ID = [
 ]
 
 #path to store downloaded pdfs
-out_dir = Path("/home/kuba/RAG/rag-systems/data/raw_pdfs")
+out_dir = Path("/home/kuba/rag-systems/data/raw_pdfs")
 out_dir.mkdir(parents=True, exist_ok=True)
 
 #Loop to download each pdf

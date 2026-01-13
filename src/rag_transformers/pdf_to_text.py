@@ -19,7 +19,7 @@ counter = 0 #Counter for number of finish pdf
 for id in id_pdf:
     
     #pdf path
-    pdf_path = Path(f"/home/kuba/RAG/rag-systems/data/raw_pdfs/{id}.pdf")
+    pdf_path = Path(f"/home/kuba/rag-systems/data/raw_pdfs/{id}.pdf")
 
     if not pdf_path.exists():
         raise FileNotFoundError(f"File doesnt exist: {pdf_path}")
@@ -39,7 +39,7 @@ for id in id_pdf:
         print(f"processed page: {page_number}")
 
     #Saving extract text to txt
-    out_path = Path(f"/home/kuba/RAG/rag-systems/data/metadata/{id}.txt")
+    out_path = Path(f"/home/kuba/rag-systems/data/metadata/{id}.txt")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(full_text, encoding="utf-8")
     counter += 1
